@@ -8,11 +8,13 @@
     <!-- <bean id="alien" class="com.example.Alien" scope="prototype">
     </bean> -->
 
-    
+
     <!-- setter is called, this is setter injection -->
     <bean id ="alien" class="com.example.Alien">
-    <property name="age" value="21"> 
-    </property>
+    <property name="age" value="21"> </property>
+    <property name="laptop" ref="lap"></property>
     </bean>
+
+    <bean id="lap" class="com.example.Laptop"></bean>
 
 </beans>
