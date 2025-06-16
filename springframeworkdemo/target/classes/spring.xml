@@ -5,7 +5,11 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="alien" class="com.example.Alien" scope="prototype">
+    <!-- <bean id="alien" class="com.example.Alien" scope="prototype">
+    </bean> -->
+
+    <bean id ="alien" class="com.example.Alien">
+    
     </bean>
 
 </beans>

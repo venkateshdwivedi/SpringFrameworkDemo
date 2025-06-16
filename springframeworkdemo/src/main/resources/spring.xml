@@ -5,7 +5,14 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="alien" class="com.example.Alien" scope="prototype">
+    <!-- <bean id="alien" class="com.example.Alien" scope="prototype">
+    </bean> -->
+
+    
+    <!-- setter is called, this is setter injection -->
+    <bean id ="alien" class="com.example.Alien">
+    <property name="age" value="21"> 
+    </property>
     </bean>
 
 </beans>
