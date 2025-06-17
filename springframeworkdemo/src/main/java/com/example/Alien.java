@@ -3,7 +3,19 @@ package com.example;
 public class Alien {
 
     private int age;
-    private Laptop laptop; //only reference created not object
+    private Computer computer; //only reference created not object
+
+    public Computer getComputer() {
+        return computer;
+    }
+
+
+
+    public void setComputer(Computer computer) {
+        this.computer = computer;
+    }
+
+
 
     public Alien(){ //constructor
         System.out.println("alien object created");
@@ -11,24 +23,11 @@ public class Alien {
 
  
 
-    public Alien(int age, Laptop laptop) {
-        System.out.println("para constructor called");
-        this.age = age;
-        this.laptop = laptop;
-    }
-
-
-
-    public Laptop getLaptop() {
-        return laptop;
-    }
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
-        System.out.println("setter of laptop called");
-    }
-
-
- 
+    // public Alien(int age, Computer laptop) {
+    //     System.out.println("para constructor called");
+    //     this.age = age;
+    //     this.laptop = laptop;
+    // }
 
 
     public int getAge() {
@@ -39,9 +38,10 @@ public class Alien {
         this.age = age;
     }
 
+
      public void code(){
         System.out.println("coding");
-        laptop.compile();;
+        computer.compile();;
     }
 
 }

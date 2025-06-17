@@ -10,21 +10,29 @@
 
 
     <!-- setter is called, this is setter injection -->
-    <bean id ="alien" class="com.example.Alien">
+
+
+    <bean id ="alien" class="com.example.Alien" autowire="byName">
+        <property name="age" value="21"/> 
+        <!-- <property name="computer" ref="lap"/> -->
+
+
 
     <!-- using constructor injection and index method -->
-    <constructor-arg index="0" value="21"/>
-    <constructor-arg index="1" ref="lap"/> 
+    <!-- <constructor-arg index="0" value="21"/>
+    <constructor-arg index="1" ref="lap"/>  -->
+
+
 
     <!-- using constructor injection and type method -->
     <!-- <constructor-arg type="int" value="21"/>
     <constructor-arg type="com.example.Laptop" ref="lap"/> -->
 
 
-    <!-- <property name="age" value="21"/> 
-    <property name="laptop" ref="lap"/> -->
+
+   
     </bean>
 
-    <bean id="lap" class="com.example.Laptop"></bean>
+    <bean id="computer" class="com.example.Laptop"></bean>
 
 </beans>
