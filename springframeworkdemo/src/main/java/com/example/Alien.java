@@ -5,9 +5,18 @@ public class Alien {
     private int age;
     private Laptop laptop; //only reference created not object
 
-    public Alien(){
+    public Alien(){ //constructor
         System.out.println("alien object created");
     }
+
+ 
+
+    public Alien(int age, Laptop laptop) {
+        System.out.println("para constructor called");
+        this.age = age;
+        this.laptop = laptop;
+    }
+
 
 
     public Laptop getLaptop() {
@@ -15,6 +24,7 @@ public class Alien {
     }
     public void setLaptop(Laptop laptop) {
         this.laptop = laptop;
+        System.out.println("setter of laptop called");
     }
 
 
