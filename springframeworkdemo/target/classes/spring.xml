@@ -12,10 +12,16 @@
     <!-- setter is called, this is setter injection -->
 
 
-    <bean id ="alien" class="com.example.Alien" autowire="byType">
+    <bean id ="alien" class="com.example.Alien" >
         <property name="age" value="21"/> 
-        <!-- <property name="computer" ref="lap"/> -->
+        <property name="computer" ref="computer1"/>
 
+
+        <!-- inner bean concept
+        <property name="computer">
+            <bean id="computer1" class="com.example.Laptop">
+            </bean>
+        </property> -->
 
 
     <!-- using constructor injection and index method -->
@@ -33,7 +39,8 @@
    
     </bean>
 
-    <bean id="computer1" class="com.example.Laptop"/>
-     <bean id="computer2" class="com.example.Desktop" primary="true"/>
+    <bean id="computer1" class="com.example.Laptop" lazy-init="true"/>
+
+     <bean id="computer2" class="com.example.Desktop"/>
 
 </beans>
