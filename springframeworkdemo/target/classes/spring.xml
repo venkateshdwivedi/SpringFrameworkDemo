@@ -12,7 +12,7 @@
     <!-- setter is called, this is setter injection -->
 
 
-    <bean id ="alien" class="com.example.Alien" autowire="byName">
+    <bean id ="alien" class="com.example.Alien" autowire="byType">
         <property name="age" value="21"/> 
         <!-- <property name="computer" ref="lap"/> -->
 
@@ -33,6 +33,7 @@
    
     </bean>
 
-    <bean id="computer" class="com.example.Laptop"></bean>
+    <bean id="computer1" class="com.example.Laptop"/>
+     <bean id="computer2" class="com.example.Desktop" primary="true"/>
 
 </beans>
