@@ -16,9 +16,14 @@ public class App {
 
         ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Desktop dt=context.getBean(Desktop.class);
+        Desktop dt=context.getBean(Desktop.class); // name can be used
+
+        // Desktop dt= (Desktop)context.getBean("com");// if we use only name then type conversion required
 
         dt.compile();
+
+        Desktop dt1=context.getBean(Desktop.class);
+        dt1.compile();
 
 
 
