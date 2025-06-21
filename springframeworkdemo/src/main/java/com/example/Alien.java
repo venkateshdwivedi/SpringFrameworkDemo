@@ -1,8 +1,18 @@
 package com.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Alien {
 
+    @Value("24")// to set value
     private int age;
+
+    @Autowired //autowiring computer variable
+    @Qualifier("laptop") //using class name in small letters
     private Computer computer; //only reference created not object
 
     public Computer getComputer() {

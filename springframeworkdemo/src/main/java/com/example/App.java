@@ -20,7 +20,7 @@ public class App {
 
         // dt.compile();
 
-        Alien obj1= (Alien) context.getBean("alien");
+        Alien obj1= context.getBean(Alien.class);
         // obj1.setAge(21);
         System.out.println(obj1.getAge());   
         obj1.code();
