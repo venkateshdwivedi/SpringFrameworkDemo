@@ -6,9 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.example.config.AppConfig;
 
-/**
- * Hello world!
- */
+
 public class App {
     public static void main(String[] args) {
         
@@ -16,14 +14,18 @@ public class App {
 
         ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Desktop dt=context.getBean(Desktop.class); // name can be used
+        // Desktop dt=context.getBean(Desktop.class); // name can be used
 
         // Desktop dt= (Desktop)context.getBean("com");// if we use only name then type conversion required
 
-        dt.compile();
+        // dt.compile();
 
-        Desktop dt1=context.getBean(Desktop.class);
-        dt1.compile();
+        Alien obj1= (Alien) context.getBean("alien");
+        // obj1.setAge(21);
+        System.out.println(obj1.getAge());   
+        obj1.code();
+
+
 
 
 
